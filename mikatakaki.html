@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高木美嘉 公式サイト - Mika Takaki Official Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(to bottom, #fff, rgba(255,255,255,0.95));
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            letter-spacing: 0.05em;
+        }
+
+        nav a:hover {
+            color: #ff1493;
+            transform: translateY(-2px);
+        }
+
+        /* メインビジュアル */
+        .hero-section {
+            margin-top: 60px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffe0f0 0%, #fff9e6 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0 #fff;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-text .english-name {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: #fff;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-icon.x {
+            color: #000;
+        }
+
+        .social-icon.x:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .social-icon.instagram {
+            color: #E4405F;
+        }
+
+        .social-icon.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(228,64,95,0.3);
+        }
+
+        .social-icon.tiktok {
+            color: #000;
+        }
+
+        .social-icon.tiktok:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #ff69b4, #ffd700);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #ffb7d5, #ffd89b);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .model-actress-labels {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .label.model {
+            background: #ff1493;
+            color: #fff;
+        }
+
+        .label.actress {
+            background: #ffd700;
+            color: #333;
+        }
+
+        /* 最新情報 */
+        .latest-section {
+            background: #fff5f5;
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #ff69b4;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #ff69b4, #ffd700);
+            border-radius: 2px;
+        }
+
+        .latest-works {
+            display: grid;
+            gap: 30px;
+        }
+
+        .latest-work {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            border: 3px solid transparent;
+            background-image: linear-gradient(white, white), 
+                              linear-gradient(135deg, #ff69b4, #ffd700);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+
+        .latest-work.upcoming {
+            background-image: linear-gradient(white, white), 
+                              linear-gradient(135deg, #87ceeb, #98fb98);
+        }
+
+        .latest-work h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .latest-work .role {
+            font-size: 1.5rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .latest-work .director {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .latest-work .status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #87ceeb;
+            color: #fff;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* プロフィール */
+        .profile-section {
+            background: linear-gradient(to bottom, #e6f7ff, #f0f9ff);
+            padding: 80px 20px;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .profile-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #ffd1dc, #ffb7c5);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .profile-details h3 {
+            font-size: 1.8rem;
+            color: #ff69b4;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .profile-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .profile-info td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-info td:first-child {
+            font-weight: bold;
+            color: #ff69b4;
+            width: 120px;
+        }
+
+        .skills-list {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skills-list h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skills-list ul {
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 8px 0;
+            color: #666;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skills-list li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+        }
+
+        /* 演技の幅 */
+        .performance-section {
+            background: #fef5ff;
+            padding: 80px 20px;
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .performance-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .performance-item h3 {
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .performance-item p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .performance-item .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .performance-item .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 出演歴 */
+        .works-section {
+            background: #fff0f5;
+            padding: 80px 20px;
+        }
+
+        .works-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            background: #fff;
+            border: 2px solid #ff69b4;
+            color: #ff69b4;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: #ff69b4;
+            color: #fff;
+        }
+
+        .works-content {
+            display: none;
+        }
+
+        .works-content.active {
+            display: block;
+        }
+
+        .works-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .work-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid #ffd700;
+        }
+
+        .work-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .work-year {
+            font-weight: bold;
+            color: #ff69b4;
+            margin-bottom: 5px;
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .work-role {
+            color: #666;
+        }
+
+        .work-director {
+            color: #87ceeb;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .work-award {
+            color: #ffd700;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .work-link {
+            display: inline-block;
+            margin-top: 5px;
+            color: #ff69b4;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .work-link:hover {
+            text-decoration: underline;
+        }
+
+        /* クリエイティブワーク */
+        .creative-section {
+            background: linear-gradient(135deg, #fff0f5 0%, #f0f8ff 100%);
+            padding: 80px 20px;
+        }
+
+        .creative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .creative-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .creative-item h3 {
+            color: #ff69b4;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .creative-item p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .creative-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: linear-gradient(135deg, #87ceeb, #98fb98);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .creative-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(135,206,235,0.4);
+        }
+
+        /* YouTube/動画 */
+        .media-section {
+            background: #f0f8ff;
+            padding: 80px 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .video-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .video-item h4 {
+            color: #ff69b4;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .media-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .media-item h3 {
+            color: #ff69b4;
+            margin-bottom: 15px;
+        }
+
+        .media-item .platform {
+            display: inline-block;
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .platform.youtube {
+            background: #ff0000;
+            color: #fff;
+        }
+
+        .platform.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: #fff;
+        }
+
+        .platform.tiktok {
+            background: #000;
+            color: #fff;
+        }
+
+        /* スクロールテキスト */
+        .scroll-banner {
+            background: #333;
+            color: #fff;
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .scroll-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-text 30s linear infinite;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
+        @keyframes scroll-text {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+        /* フッター */
+        footer {
+            background: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .footer-social-icon {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #666;
+        }
+
+        .footer-social-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-social-icon:hover {
+            background: #ff69b4;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255,105,180,0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-text .social-icons {
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .works-tabs {
+                gap: 10px;
+            }
+            
+            .tab-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .performance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#latest">LATEST</a>
+            <a href="#profile">PROFILE</a>
+            <a href="#performance">PERFORMANCE</a>
+            <a href="#works">WORKS</a>
+            <a href="#creative">CREATIVE</a>
+            <a href="#media">MEDIA</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>高木 美嘉</h1>
+                <p class="english-name">Mika Takaki</p>
+                <p class="tagline">
+                    映画・ドラマ・CM・MVで活躍する俳優<br>
+                    そして、クリエイターとしても活動中
+                </p>
+                <div class="social-icons">
+                    <a href="https://x.com/mika_mika221123" target="_blank" class="social-icon x" title="X (Twitter)">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mikatakaki1123/" target="_blank" class="social-icon instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@mikatakaki3131" target="_blank" class="social-icon tiktok" title="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#contact" class="contact-btn">お問合せ・ご依頼はコチラ</a>
+            </div>
+            <div class="hero-image">
+                メインプロフィール写真
+                <!-- 明るく親しみやすい表情の写真推奨 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新情報 -->
+    <section class="latest-section" id="latest">
+        <div class="container">
+            <h2 class="section-title">LATEST WORKS</h2>
+            <div class="latest-works">
+                <div class="latest-work upcoming">
+                    <span class="status">2026年公開予定</span>
+                    <h3>短編映画「器」</h3>
+                    <p class="role">W主演：安藤若菜役</p>
+                    <p class="director">監督：未発表</p>
+                </div>
+                <div class="latest-work">
+                    <h3>映画「憧れdoll」</h3>
+                    <p class="role">尚美幼少期役</p>
+                    <p class="director">監督：みやび</p>
+                    <p class="work-award">ゆうばり国際ファンタスティック映画祭グランプリ受賞<br>
+                    中之島映画祭グランプリ受賞<br>
+                    日本映像グランプリ受賞</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スクロールテキスト -->
+    <div class="scroll-banner">
+        <div class="scroll-text">
+            MIKA TAKAKI OFFICIAL SITE ☆ 高木美嘉 公式サイト ☆ ACTRESS & CREATOR ☆ MIKA TAKAKI OFFICIAL SITE ☆ 高木美嘉 公式サイト ☆ ACTRESS & CREATOR ☆ 
+        </div>
+    </div>
+
+    <!-- プロフィール -->
+    <section class="profile-section" id="profile">
+        <div class="container">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-content">
+                <div class="profile-image">
+                    プロフィール写真2
+                    <!-- 別カット：演技中や別衣装の写真推奨 -->
+                </div>
+                <div class="profile-details">
+                    <h3>高木 美嘉 / Mika Takaki</h3>
+                    <div class="profile-info">
+                        <table>
+                            <tr>
+                                <td>生年月日</td>
+                                <td>2010年11月23日（14歳）</td>
+                            </tr>
+                            <tr>
+                                <td>出身地</td>
+                                <td>茨城県</td>
+                            </tr>
+                            <tr>
+                                <td>身長</td>
+                                <td>150cm</td>
+                            </tr>
+                            <tr>
+                                <td>体重</td>
+                                <td>33.0kg</td>
+                            </tr>
+                            <tr>
+                                <td>靴サイズ</td>
+                                <td>洋服サイズ 150 / 靴サイズ 21〜22cm</td>
+                            </tr>
+                            <tr>
+                                <td>所属</td>
+                                <td>有限会社Bright（ブライト）</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="skills-list">
+                        <h4>特技</h4>
+                        <ul>
+                            <li>合気道（9年）</li>
+                            <li>クラシックバレエ（9年）</li>
+                            <li>イラスト・漫画を描くこと</li>
+                            <li>動画編集</li>
+                            <li>陸上競技（中長距離、走り幅跳び）</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://ja.wikipedia.org/wiki/%E9%AB%98%E6%9C%A8%E7%BE%8E%E5%98%89" target="_blank" class="work-link">
+                            → Wikipedia
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 演技の幅 -->
+    <section class="performance-section" id="performance">
+        <div class="container">
+            <h2 class="section-title">PERFORMANCE RANGE</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 40px;">
+                CM、映画、ドラマなど、様々なジャンルでの演技をご覧ください。<br>
+                幼少期役から主演まで、幅広い役柄を演じ分けています。
+            </p>
+            <div class="performance-grid">
+                <div class="performance-item">
+                    <h3>映画「夜明け」舞台挨拶</h3>
+                    <p>成田あさ役として出演。柳楽優弥さん、小林薫さんと共演。</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/SwHWCxAUzc8" 
+                                title="夜明け 舞台挨拶" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <h3>見守りサービス「みもり」CM</h3>
+                    <p>メイン娘役として出演。親子の温かい日常を演じています。</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/gCO2fc6tuCw" 
+                                title="みもり CM" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <h3>映画「憧れdoll」</h3>
+                    <p>ゆうばり国際ファンタスティック映画祭グランプリ受賞作品</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/bsyCaP864Ww?start=24" 
+                                title="憧れdoll" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <h3>NHKスペシャル「MEGAQUAKE」</h3>
+                    <p>鈴木沙里役として出演。シミュレーションドラマで重要な役割を演じました。</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/V9e5yuZ1CxA?start=278" 
+                                title="NHKスペシャル MEGAQUAKE" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 出演歴 -->
+    <section class="works-section" id="works">
+        <div class="container">
+            <h2 class="section-title">WORKS</h2>
+            <div class="works-tabs">
+                <button class="tab-btn active" onclick="showTab('movie')">映画</button>
+                <button class="tab-btn" onclick="showTab('tv')">TV・CM</button>
+                <button class="tab-btn" onclick="showTab('mv')">MV</button>
+                <button class="tab-btn" onclick="showTab('other')">その他</button>
+            </div>
+            
+            <div id="movie" class="works-content active">
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-year">2019.03.06</div>
+                        <div class="work-title">ドリームエリア株式会社 児童見守りGPSサービス「みもり」</div>
+                        <div class="work-role">メイン娘役</div>
+                        <div class="work-director">総集編/親子げんか編 WEB/全国イオン、ビックカメラ</div>
+                        <a href="#performance" class="work-link">→ 動画を見る</a>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2023</div>
+                        <div class="work-title">「憧れdoll」</div>
+                        <div class="work-role">尚美幼少期役</div>
+                        <div class="work-director">監督：みやび</div>
+                        <div class="work-award">2024年製作<br>
+                        ゆうばり国際ファンタスティック映画祭グランプリ受賞<br>
+                        中之島映画祭グランプリ受賞<br>
+                        日本映像グランプリ受賞</div>
+                        <a href="#performance" class="work-link">→ 動画を見る</a>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2022</div>
+                        <div class="work-title">「サイキッカーZ」</div>
+                        <div class="work-role">ハルカ幼少期役</div>
+                        <div class="work-director">監督：木場明義</div>
+                        <div class="work-award">池袋シネマ・ロサ2022年1月15日〜19日公開</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2022</div>
+                        <div class="work-title">「BLANCO」</div>
+                        <div class="work-role">主演・ミカ役</div>
+                        <div class="work-director">監督：柴田明良</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2021</div>
+                        <div class="work-title">「シャーマンの娘」</div>
+                        <div class="work-role">赤星海花（木原渚さん）幼少期役</div>
+                        <div class="work-director">監督：井坂優介</div>
+                        <div class="work-award">カナザワ映画祭2021入賞<br>
+                        池袋シネマ・ロサ2022年11月19日〜12月2日公開<br>
+                        ハンブルク日本映画祭受賞</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2021</div>
+                        <div class="work-title">「片瞑り（かたつむり）」</div>
+                        <div class="work-role">ミカ役</div>
+                        <div class="work-director">監督：森田亜紀</div>
+                        <div class="work-award">第23回長岡インディーズムービーコンペテション準グランプリ</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2020</div>
+                        <div class="work-title">オムニバス映画『地元ピース！』栃木篇「ブースト」</div>
+                        <div class="work-role">マチコ（長谷川葉生さん）幼少期役</div>
+                        <div class="work-director">監督：木場明義</div>
+                        <div class="work-award">おおいた自主映画祭：最優秀作品賞／脚本賞／女優賞(長谷川葉生さん)<br>
+                        第22回長岡インディーズムービーコンペテション／俳優賞<br>
+                        那須国際短編映画祭出品</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019</div>
+                        <div class="work-title">「異邦人」（カミュ原作）</div>
+                        <div class="work-role">娘役</div>
+                        <div class="work-director">監督：大山千賀子</div>
+                        <div class="work-award">熱海国際映画祭上映</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019</div>
+                        <div class="work-title">「夜明け」</div>
+                        <div class="work-role">成田あさ役</div>
+                        <div class="work-director">監督：広瀬奈々子</div>
+                        <div class="work-award">第19回東京フィルメックスコンペティション部門 スペシャル・メンション受賞</div>
+                        <a href="#performance" class="work-link">→ 舞台挨拶動画を見る</a>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2018</div>
+                        <div class="work-title">「猫カフェ」</div>
+                        <div class="work-role">津田沙世（小倉優香さん）幼少期役</div>
+                        <div class="work-director">監督：沖田光</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2018</div>
+                        <div class="work-title">短編映画「虫がママって言った」</div>
+                        <div class="work-role">メイン女の子役</div>
+                        <div class="work-director">監督：渡邉玲</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017</div>
+                        <div class="work-title">「ピリオド」</div>
+                        <div class="work-role">ヒロイン（梨本りえさん）幼少期役</div>
+                        <div class="work-director">監督：佐々木聖</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017</div>
+                        <div class="work-title">「闇金ドッグス6」</div>
+                        <div class="work-role">女の子役</div>
+                        <div class="work-director">監督：元木隆史</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tv" class="works-content">
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-year">2021.11.05〜</div>
+                        <div class="work-title">NHK BS時代劇『剣樹抄(けんじゅしょう)～光圀公と俺～』</div>
+                        <div class="work-role">レギュラー出演</div>
+                        <div class="work-director">毎週金曜よる8時〜BSプレミアム</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2020.10.15</div>
+                        <div class="work-title">TVCM AOKI 洗えるスーツ</div>
+                        <div class="work-role">上戸彩さん出演作品</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.08.19</div>
+                        <div class="work-title">TVCM ECCジュニア</div>
+                        <div class="work-role">道しるべ篇/アリエルのように篇 サブキャスト（娘役）</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.06.25</div>
+                        <div class="work-title">日本テレビ 『ザ！世界仰天ニュース』</div>
+                        <div class="work-role">地味に痛い体験2時間SP 再現VTR/娘役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.01.12</div>
+                        <div class="work-title">TVCM SoftBankギガ国物語「はじまり」篇（60秒）</div>
+                        <div class="work-role">サブキャスト</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2018.09.01</div>
+                        <div class="work-title">NHKスペシャル 『MEGAQUAKE』</div>
+                        <div class="work-role">鈴木沙理役</div>
+                        <div class="work-director">南海トラフ大地震Xデーに備えろ</div>
+                        <a href="#performance" class="work-link">→ 動画を見る</a>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2018.06.10</div>
+                        <div class="work-title">CATV JWAY「カリスマジャパン」CM</div>
+                        <div class="work-role">娘役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017〜</div>
+                        <div class="work-title">TVCM各種</div>
+                        <div class="work-role">明治プロビオヨーグルトR-1、中古車ガリバー、アクサ生命、ユーワフルーツ青汁など</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2016.12.20</div>
+                        <div class="work-title">NTV「幸せ!ボンビーガール」</div>
+                        <div class="work-role">釈由美子さん妹幼少期役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2016.04.21</div>
+                        <div class="work-title">CX「早子先生、結婚するって本当ですか？」</div>
+                        <div class="work-role">守山風子（川栄李奈さん）幼少期役</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mv" class="works-content">
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-year">2019</div>
+                        <div class="work-title">六道寺恵梨「優しい花」MV</div>
+                        <div class="work-role">主人公（清瀬まちさん）幼少期役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019</div>
+                        <div class="work-title">未完成リップスパークル 『いたずらさまーキュンラプソディ』MV</div>
+                        <div class="work-role">ラブリーちゃん役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019</div>
+                        <div class="work-title">ドラマストアMV 「グッバイ・ヒーロー」</div>
+                        <div class="work-role">主人公幼少期役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017</div>
+                        <div class="work-title">カミツキ「KAZOEUTA」MV</div>
+                        <div class="work-role">ヒロイン幼少期役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017</div>
+                        <div class="work-title">DAMY「世界は回る」MV</div>
+                        <div class="work-role">少女役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2017</div>
+                        <div class="work-title">六道寺恵梨「CrystalSky」MV</div>
+                        <div class="work-role">主人公（橘ろあさん）幼少期役</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="other" class="works-content">
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-year">2019.03.06</div>
+                        <div class="work-title">ドリームエリア株式会社 児童見守りGPSサービス「みもり」</div>
+                        <div class="work-role">メイン娘役</div>
+                        <div class="work-director">総集編/親子げんか編 WEB/全国イオン、ビックカメラ</div>
+                        <a href="#performance" class="work-link">→ 動画を見る</a>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2022</div>
+                        <div class="work-title">水戸商工会議所主催 納豆まぜまぜ世界選手権水戸大会</div>
+                        <div class="work-role">チャンピオン</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2022</div>
+                        <div class="work-title">ホテル「レイクビュー水戸」納豆朝食PR</div>
+                        <div class="work-role">PR出演</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2022</div>
+                        <div class="work-title">茨城デスティネーションキャンペーン</div>
+                        <div class="work-role">キャンプ施設モデル・娘役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2021.08.01</div>
+                        <div class="work-title">いばらきフラワーパーク（花やさと山）</div>
+                        <div class="work-role">アトラクション、宿泊施設イメージモデル</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2020.01.03</div>
+                        <div class="work-title">茨城トヨペット ブランディングムービー</div>
+                        <div class="work-role">娘役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.12.30</div>
+                        <div class="work-title">Honda GYRO e: 電動ビジネススクーター</div>
+                        <div class="work-role">メイン娘役</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.01.26</div>
+                        <div class="work-title">「夜明け」舞台挨拶</div>
+                        <div class="work-role">＠あまや座 登壇</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-year">2019.01.19</div>
+                        <div class="work-title">「夜明け」東京初日舞台挨拶</div>
+                        <div class="work-role">＠新宿ピカデリー 登壇</div>
+                        <div class="work-director">登壇者：柳楽優弥、小林薫、YOUNGDAIS、鈴木常吉、高木美嘉、広瀬奈々子監督</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- クリエイティブワーク -->
+    <section class="creative-section" id="creative">
+        <div class="container">
+            <h2 class="section-title">CREATIVE WORKS</h2>
+            <div class="creative-grid">
+                <div class="creative-item">
+                    <h3>動画編集作品</h3>
+                    <p>
+                        YouTube、Instagram、TikTokで<br>
+                        オリジナル動画を配信中！<br>
+                        編集技術を活かした作品を公開しています。
+                    </p>
+                    <a href="#" class="creative-btn">動画作品を見る</a>
+                </div>
+                <div class="creative-item">
+                    <h3>4コマ漫画</h3>
+                    <p>
+                        自転車乗りの母を描いた<br>
+                        130本以上の4コマ漫画シリーズ。<br>
+                        日常の温かいエピソードを綴っています。
+                    </p>
+                    <a href="#" class="creative-btn">4コマ漫画を読む</a>
+                </div>
+                <div class="creative-item">
+                    <h3>イラスト作品</h3>
+                    <p>
+                        オリジナルイラストや<br>
+                        キャラクターデザインなど<br>
+                        様々な作品を制作中。
+                    </p>
+                    <a href="#" class="creative-btn">イラストを見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メディア -->
+    <section class="media-section" id="media">
+        <div class="container">
+            <h2 class="section-title">MEDIA & VIDEOS</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <span class="platform youtube">YouTube</span>
+                    <h3>過去の出演作品集</h3>
+                    <p>映画やMVなど、様々な作品での演技をご覧いただけます。</p>
+                    <a href="https://www.youtube.com/playlist?list=PLW19GGoMA3PS8gQdcJgvwZJUn0TPQrlT7" target="_blank" class="creative-btn">
+                        プレイリストを見る
+                    </a>
+                </div>
+                <div class="media-item">
+                    <span class="platform youtube">YouTube</span>
+                    <h3>オリジナル動画</h3>
+                    <p>自身で編集した動画作品を公開中。</p>
+                    <a href="#" class="creative-btn">チャンネルを見る</a>
+                </div>
+                <div class="media-item">
+                    <span class="platform instagram">Instagram</span>
+                    <h3>日常とクリエイティブ</h3>
+                    <p>撮影の裏側や日常、イラスト作品などを投稿。</p>
+                    <a href="https://www.instagram.com/mikatakaki1123/" target="_blank" class="creative-btn">Instagramを見る</a>
+                </div>
+                <div class="media-item">
+                    <span class="platform tiktok">TikTok</span>
+                    <h3>ショート動画</h3>
+                    <p>楽しいショート動画を配信中！</p>
+                    <a href="https://www.tiktok.com/@mikatakaki3131" target="_blank" class="creative-btn">TikTokを見る</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #666;">※最新の出演情報は所属事務所までお問い合わせください</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- スクロールテキスト -->
+    <div class="scroll-banner">
+        <div class="scroll-text">
+            MIKA TAKAKI OFFICIAL SITE ☆ 高木美嘉 公式サイト ☆ ACTRESS & CREATOR ☆ MIKA TAKAKI OFFICIAL SITE ☆ 高木美嘉 公式サイト ☆ ACTRESS & CREATOR ☆ 
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer id="contact">
+        <h3 style="color: #ff69b4; margin-bottom: 20px;">お問合せ・ご依頼</h3>
+        <p>有限会社Bright（ブライト） 担当：三浦</p>
+        <p style="margin-top: 10px;">
+            TEL：052-414-5840　携帯：090-4258-2111<br>
+            MAIL：info@bright-co.jp
+        </p>
+        <div class="footer-links" style="margin-top: 30px;">
+            <a href="https://ja.wikipedia.org/wiki/%E9%AB%98%E6%9C%A8%E7%BE%8E%E5%98%89" target="_blank">Wikipedia</a>
+            <a href="https://www.youtube.com/playlist?list=PLW19GGoMA3PS8gQdcJgvwZJUn0TPQrlT7" target="_blank">YouTube</a>
+            <a href="https://docs.google.com/spreadsheets/d/1w_YwwpPykcG3Lkoki4pe5BimOnZCZfbo3HE7ODU6Sso/edit?usp=sharing" target="_blank">最新情報</a>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.9rem;">&copy; 2025 Mika Takaki Official Site. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // すべてのタブコンテンツを非表示
+            const contents = document.querySelectorAll('.works-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // すべてのタブボタンから active クラスを削除
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // 選択されたタブを表示
+            document.getElementById(tabName).classList.add('active');
+            
+            // クリックされたボタンに active クラスを追加
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
